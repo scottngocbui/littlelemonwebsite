@@ -1,0 +1,16 @@
+.whole-nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.main-nav {
+    display: flex;
+    list-style-type: none;
+    color: black;
+    font-family: 'Karla', sans-serif;
+    font-size: large;
+}
+
+.main-nav > li {
+    margin-left: 30px;
+}

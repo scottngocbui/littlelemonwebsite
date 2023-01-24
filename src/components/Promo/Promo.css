@@ -1,0 +1,41 @@
+.promo-section {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+}
+
+.promo-main {
+    grid-column: 5/ span 3;
+    display: inline;
+    text-align: left;
+    padding-right: 20%;
+}
+
+.promo-main > h1 {
+    color: #F4CE14;
+    font-size: 64px;
+    align-items: left;
+    font-family: 'Markazi Text', serif;
+}
+
+.promo-main > h2 {
+    color: #EDEFEE;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+}
+
+.promo-main > p {
+    font-family: 'Karla', sans-serif;
+    color: #EDEFEE;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+.promo-section > img {
+    position: relative;
+    top: 50px;
+    border-radius: 16px;
+    height: 400px;
+    width: 400px;
+}
