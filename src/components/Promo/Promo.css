@@ -7,9 +7,9 @@
 
 .promo-main {
     grid-column: 5/ span 3;
-    display: inline;
+    display: block;
     text-align: left;
-    padding-right: 20%;
+    padding-right: 10%;
 }
 
 .promo-main > h1 {
@@ -23,19 +23,20 @@
     color: #EDEFEE;
     font-size: 40px;
     font-family: 'Karla', sans-serif;
+    margin-top: -75px;
 }
 
 .promo-main > p {
     font-family: 'Karla', sans-serif;
     color: #EDEFEE;
     font-size: 16px;
-    font-family: 'Karla', sans-serif;
 }
 
 .promo-section > img {
     position: relative;
-    top: 50px;
+    top: 100px;
     border-radius: 16px;
     height: 400px;
     width: 400px;
 }
+
