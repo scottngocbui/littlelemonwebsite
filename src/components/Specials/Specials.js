@@ -9,9 +9,13 @@ function Specials() {
     return (
             <section className="specials">
                 <h1>This week's Specials!</h1>
-                <div className="cards">
+                <div className="card1">
                     <Card1 />
+                </div>
+                <div className="card2">
                     <Card2 />
+                </div>
+                <div className="card3">
                     <Card3 />
                 </div>
             </section>

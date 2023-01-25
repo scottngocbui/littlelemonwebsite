@@ -1,7 +1,7 @@
 .whole-nav {
     display: flex;
     align-items: center;
-    margin: auto;
+    justify-content: center;
 }
 .main-nav {
     display: flex;
@@ -12,5 +12,5 @@
 }
 
 .main-nav > li {
-    margin-left: 30px;
+    margin-left: 20px;
 }

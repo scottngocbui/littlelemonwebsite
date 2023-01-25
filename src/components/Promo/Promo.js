@@ -12,7 +12,9 @@ function Promo() {
                         Reserve a Table
                     </button>
                 </div>
-                <img src={require('../../assets/heropicture.jpg')}/>
+                <div className="promo-picture">
+                    <img src={require('../../assets/heropicture.jpg')}/>
+                </div>
             </section>
             );
 }

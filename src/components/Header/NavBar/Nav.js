@@ -5,13 +5,15 @@ function Nav() {
 
     return (
         <nav className="whole-nav">
-            <LittleLemonLogo height={100} width={200}/>
+            <div className="logo">
+                <LittleLemonLogo height={100} width={200}/>
+            </div>
             <ul className="main-nav">
                 <li>Home</li>
                 <li>About</li>
                 <li>Menu</li>
                 <li>Reservations</li>
-                <li>Order Online</li>
+                <li>Order</li>
                 <li>Login</li>
             </ul>
         </nav>
