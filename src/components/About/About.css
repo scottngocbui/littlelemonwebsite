@@ -1,0 +1,51 @@
+.about-section {
+    grid-row: 5;
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+.about-main {
+    grid-column: 3 / span 4;
+    text-align: left;
+    padding-bottom: 50px;
+    align-self: center;
+}
+
+.about-main > h1 {
+    color: #F4CE14;
+    font-size: 64px;
+    align-items: left;
+    font-family: 'Markazi Text', serif;
+}
+
+.about-main > h2 {
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+    margin-top: -75px;
+}
+
+.about-main > p {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.about-picture {
+    grid-column: 7 / span 4;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-picture > img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+
+@media (min-width: 1025px) {
+
+}
+
