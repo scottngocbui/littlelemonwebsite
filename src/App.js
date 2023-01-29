@@ -4,6 +4,7 @@ import Promo from './components/Promo/Promo';
 import Specials from './components/Specials/Specials';
 import Testimonials from './components/Testimonials/Testimonials';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Specials />
       <Testimonials />
       <About />
+      <Footer />
     </div>
   );
 }
