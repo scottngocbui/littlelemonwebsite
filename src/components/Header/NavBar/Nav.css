@@ -14,3 +14,24 @@
 .main-nav > li {
     margin-left: 20px;
 }
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media only screen and (max-width: 1024px) {
+
+}
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+.main-nav {
+    display: flex;
+    list-style-type: none;
+    color: black;
+    font-family: 'Karla', sans-serif;
+    font-size: large;
+}
+
+.main-nav > li {
+    margin-left: 20px;
+}
+
+}

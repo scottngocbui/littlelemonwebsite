@@ -32,3 +32,20 @@
     list-style-type: none;
     color: #EDEFEE;
 }
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media only screen and (max-width: 1024px) {
+    .footer-main {
+        background-color: #495E57;
+        grid-row: 6;
+        grid-column: 1 / span 8;
+        display: flex;
+        justify-content: center;
+    }
+}
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+
+
+}

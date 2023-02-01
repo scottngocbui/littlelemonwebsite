@@ -57,3 +57,14 @@ img {
     grid-area: button;
     grid-row: 6;
 }
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media only screen and (max-width: 1024px) {
+
+}
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+
+
+}
