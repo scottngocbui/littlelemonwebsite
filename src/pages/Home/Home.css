@@ -1,0 +1,22 @@
+.Home {
+grid-column: 1/span 12;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media only screen and (max-width: 1024px) {
+
+.Home {
+  grid-column: 1/span 8;
+}
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+
+@media screen and (max-width: 600px) {
+
+.Home {
+  grid-column: 1/span 4;
+}
+
+}

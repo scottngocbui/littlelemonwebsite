@@ -1,0 +1,27 @@
+.Reservation {
+    display: flex;
+    grid-row: 2;
+    grid-column: 3/span 8;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media only screen and (max-width: 1024px) {
+
+.Reservation {
+    grid-column: 1/span 8;
+}
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+
+@media screen and (max-width: 600px) {
+
+.Reservation {
+    grid-column: 1/span 4;
+}
+
+}

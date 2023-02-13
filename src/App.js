@@ -1,22 +1,19 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Promo from './components/Promo/Promo';
-import Specials from './components/Specials/Specials';
-import Testimonials from './components/Testimonials/Testimonials';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home/Home';
+import ReservationPage from './pages/Reservations/Reservations';
 
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <Promo />
-      <Specials />
-      <Testimonials />
-      <About />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="reservation" element={<ReservationPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

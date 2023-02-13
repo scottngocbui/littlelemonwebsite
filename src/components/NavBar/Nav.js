@@ -1,5 +1,6 @@
 import "./Nav.css"
-import {ReactComponent as LittleLemonLogo} from '../../../assets/Logo.svg'
+import {ReactComponent as LittleLemonLogo} from './../../assets/Logo.svg'
+import { Link } from 'react-router-dom'
 
 function Nav() {
 
@@ -9,10 +10,12 @@ function Nav() {
                 <LittleLemonLogo height={100} width={200}/>
             </div>
             <ul className="main-nav">
-                <li>Home</li>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
                 <li>About</li>
                 <li>Menu</li>
-                <li>Reservations</li>
+                <li><Link to="reservation">Reservations</Link></li>
                 <li>Order</li>
                 <li>Login</li>
             </ul>

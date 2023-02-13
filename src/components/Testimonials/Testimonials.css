@@ -43,7 +43,6 @@
         display: grid;
         grid-column: 1 / span 8;
         grid-template-columns: repeat(8, 1fr);
-        gap: 10px;
         grid-template-rows: 200px 1fr 100px;
         width: 100%;
         background-color: #495E57;
