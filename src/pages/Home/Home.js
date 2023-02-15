@@ -12,7 +12,6 @@ function Home() {
             <Specials />
             <Testimonials />
             <About />
-            <Footer />
         </div>
     );
 }

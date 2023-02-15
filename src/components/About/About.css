@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 250px;
 }
 
 .about-main {
