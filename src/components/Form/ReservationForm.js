@@ -7,11 +7,17 @@ function ReservationForm() {
     return(
         <Formik
             initialValues={{
+                partySize: '',
+                date: '',
                 firstName: '',
                 lastName: '',
                 email: ''
             }}
             validationSchema={Yup.object({
+                partySize: Yup.string()
+                    .required('Please select your Party Size'),
+                occasion: Yup.string()
+                    .required('Please select your Occasion'),
                 firstName: Yup.string()
                     .required('Please enter your First Name'),
                 lastName: Yup.string()
@@ -29,6 +35,7 @@ function ReservationForm() {
         >
             <Form>
                 <h1>Table Reservations</h1>
+
                 <Field name="partySize" as="select" className="partySize">
                     <option value="" disabled selected>Select your Party Size</option>
                     <option value ="1">1</option>
@@ -42,57 +49,36 @@ function ReservationForm() {
                     <option value ="9">9</option>
                     <option value ="10">10</option>
                 </Field>
+                <br/>
+                <ErrorMessage name="partySize" />
+                <br/>
                 <Field name="date" as="date" className="date" />
+                <br/>
                 <Field name="time" as="time" className="time" />
+                <br/>
                 <Field name="occasion" as="select" className="occasion">
                     <option value="" disabled selected>Occasion</option>
-                    <option value>Birthday</option>
-                    <option>Anniversary</option>
-                    <option>Engagement</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Engagement">Engagement</option>
+                </Field>
+                <br/>
+                <ErrorMessage name="occasion" />
+                <br/>
+                <Field name="firstName" type="text" placeholder="First Name"/>
+                <br/>
+                <ErrorMessage name="firstName" />
+                <br/>
+                <Field name="lastName" type="text" placeholder="Last Name"/>
+                <br/>
+                <ErrorMessage name="lastName" />
+                <br/>
+                <Field name="email" type="email" placeholder="Email Address"/>
+                <br/>
+                <ErrorMessage name="email" />
+                <br/>
+                <button type="submit">Submit</button>
             </Form>
-
-                    <select>
-                        <option value="" disabled selected>Occasion</option>
-                        <option>Birthday</option>
-                        <option>Anniversary</option>
-                        <option>Engagement</option>
-                    </select>
-                    <br />
-
-                    <input
-                        id="firstName"
-                        name="firstName"
-                        type="text"
-                        placeholder='First Name'
-                        {...formik.getFieldProps('firstName')}
-                    />
-                    {formik.touched.firstName && formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
-                    <br />
-
-                    <input
-                        id="lastName"
-                        name="lastName"
-                        type="text"
-                        placeholder='Last Name'
-                        {...formik.getFieldProps('lastName')}
-                    />
-                    {formik.touched.lastName && formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
-                    <br />
-
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder='Email Address'
-                        {...formik.getFieldProps('email')}
-                    />
-                    {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
-                    <br />
-
-                    <button type="submit">Submit</button>
-
-                </form>
-            )}
         </Formik>
     );
 };
