@@ -1,14 +1,19 @@
 import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik';
 import "./ReservationForm.css";
 import * as Yup from 'yup';
-import { createRoutesFromChildren } from 'react-router-dom';
+import ReactDatePicker from 'react-datepicker';
+import { useState } from 'react';
+import "react-datepicker/dist/react-datepicker.css"
 
 function ReservationForm() {
+    const [startDate, setStartDate] = useState(new Date());
+
     return(
         <Formik
             initialValues={{
                 partySize: '',
-                date: '',
+                reservationDate: new Date(),
+                occasion: '',
                 firstName: '',
                 lastName: '',
                 email: ''
@@ -16,8 +21,6 @@ function ReservationForm() {
             validationSchema={Yup.object({
                 partySize: Yup.string()
                     .required('Please select your Party Size'),
-                occasion: Yup.string()
-                    .required('Please select your Occasion'),
                 firstName: Yup.string()
                     .required('Please enter your First Name'),
                 lastName: Yup.string()
@@ -52,7 +55,7 @@ function ReservationForm() {
                 <br/>
                 <ErrorMessage name="partySize" />
                 <br/>
-                <Field name="date" as="date" className="date" />
+                <ReactDatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
                 <br/>
                 <Field name="time" as="time" className="time" />
                 <br/>
