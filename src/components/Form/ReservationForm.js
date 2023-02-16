@@ -27,38 +27,29 @@ function ReservationForm() {
                 }, 400)
             }}
         >
-            {formik => (
-                <form onSubmit={formik.handleSubmit}>
-                    <h1>Table Reservations</h1>
-                    <select>
-                        <option value="" disabled selected>Select your Party Size</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </select>
-                    <br />
-
-                    <input
-                        id="date"
-                        name="date"
-                        type="date"
-                        placeholder='Date'
-                    />
-                    <br />
-
-                    <input
-                        id="time"
-                        name="time"
-                        type="time"
-                    />
-                    <br />
+            <Form>
+                <h1>Table Reservations</h1>
+                <Field name="partySize" as="select" className="partySize">
+                    <option value="" disabled selected>Select your Party Size</option>
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                    <option value ="6">6</option>
+                    <option value ="7">7</option>
+                    <option value ="8">8</option>
+                    <option value ="9">9</option>
+                    <option value ="10">10</option>
+                </Field>
+                <Field name="date" as="date" className="date" />
+                <Field name="time" as="time" className="time" />
+                <Field name="occasion" as="select" className="occasion">
+                    <option value="" disabled selected>Occasion</option>
+                    <option value>Birthday</option>
+                    <option>Anniversary</option>
+                    <option>Engagement</option>
+            </Form>
 
                     <select>
                         <option value="" disabled selected>Occasion</option>
