@@ -8,6 +8,15 @@
     padding-bottom: 300px;
 }
 
+.reservation-picture{
+    filter: blur(4px);
+    width: 100%;
+}
+
+h1{
+    position:absolute;
+}
+
 /* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
 
 @media only screen and (max-width: 1024px) {
