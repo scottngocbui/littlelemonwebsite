@@ -13,7 +13,6 @@ function ReservationForm() {
             initialValues={{
                 partySize: '',
                 reservationDate: new Date(),
-                time: '',
                 occasion: '',
                 firstName: '',
                 lastName: '',
@@ -22,8 +21,6 @@ function ReservationForm() {
             validationSchema={Yup.object({
                 partySize: Yup.string()
                     .required('Please select your Party Size'),
-                time: Yup.string()
-                    .required('Please select your Reservation Time'),
                 firstName: Yup.string()
                     .required('Please enter your First Name'),
                 lastName: Yup.string()
@@ -59,23 +56,7 @@ function ReservationForm() {
                 <br/>
                 <ErrorMessage name="partySize" />
                 <br/>
-                <ReactDatePicker selected={startDate} onChange={(date) => setStartDate(date)}/>
-                <br/>
-                <Field name="time" as="select" className="time">
-                    <option value="" disabled selected>Select your Reservation Time</option>
-                    <option value ="3:00PM">3:00PM</option>
-                    <option value ="3:30PM">3:30PM</option>
-                    <option value ="4:00PM">4:00PM</option>
-                    <option value ="4:30PM">4:30PM</option>
-                    <option value ="5:00PM">5:00PM</option>
-                    <option value ="5:30PM">5:30PM</option>
-                    <option value ="6:00PM">6:00PM</option>
-                    <option value ="6:30PM">6:30PM</option>
-                    <option value ="7:00PM">7:00PM</option>
-                    <option value ="7:30PM">7:30PM</option>
-                </Field>
-                <br/>
-                <ErrorMessage name="time" />
+                <ReactDatePicker selected={startDate} onChange={(date) => setStartDate(date)} showTimeSelect dateFormat="Pp"/>
                 <br/>
                 <Field name="occasion" as="select" className="occasion">
                     <option value="" disabled selected>Occasion</option>
