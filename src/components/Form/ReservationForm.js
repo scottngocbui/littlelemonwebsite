@@ -7,7 +7,6 @@ import "react-datepicker/dist/react-datepicker.css"
 
 function ReservationForm() {
     const [startDate, setStartDate] = useState(new Date());
-    const [time, setTime] = useState('');
 
     return(
         <Formik
