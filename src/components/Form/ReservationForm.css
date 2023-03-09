@@ -3,4 +3,15 @@ input, select {
     padding: 10px;
     height: 50px;
     width: 300px;
+    border-radius: 16px;
+}
+
+.errorField {
+    color: red;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+    border-color: red;
 }

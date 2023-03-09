@@ -54,9 +54,12 @@ function ReservationForm() {
                     <option value ="10">10</option>
                 </Field>
                 <br/>
-                <ErrorMessage name="partySize" />
+                <div className='errorField'>
+                    <ErrorMessage name="partySize" />
+                </div>
                 <br/>
                 <ReactDatePicker selected={startDate} onChange={(date) => setStartDate(date)} showTimeSelect dateFormat="Pp"/>
+                <br/>
                 <br/>
                 <Field name="occasion" as="select" className="occasion">
                     <option value="" disabled selected>Occasion</option>
@@ -65,19 +68,24 @@ function ReservationForm() {
                     <option value="Engagement">Engagement</option>
                 </Field>
                 <br/>
-                <ErrorMessage name="occasion" />
                 <br/>
                 <Field name="firstName" type="text" placeholder="First Name"/>
                 <br/>
-                <ErrorMessage name="firstName" />
+                <div className='errorField'>
+                    <ErrorMessage name="firstName" />
+                </div>
                 <br/>
                 <Field name="lastName" type="text" placeholder="Last Name"/>
                 <br/>
-                <ErrorMessage name="lastName" />
+                <div className='errorField'>
+                    <ErrorMessage name="lastName" />
+                </div>
                 <br/>
                 <Field name="email" type="email" placeholder="Email Address"/>
                 <br/>
-                <ErrorMessage name="email" />
+                <div className='errorField'>
+                    <ErrorMessage name="email" />
+                </div>
                 <br/>
                 <button type="submit">Submit</button>
             </Form>
