@@ -1,9 +1,10 @@
-import { Formik, Form, Field, ErrorMessage, useFormik } from 'formik';
+import { Formik, Form, Field, ErrorMessage} from 'formik';
 import "./ReservationForm.css";
 import * as Yup from 'yup';
 import { useState } from 'react';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"
+import toast, { Toaster } from 'react-hot-toast';
 
 function ReservationForm() {
     const [startDate, setStartDate] = useState(new Date());
@@ -29,17 +30,19 @@ function ReservationForm() {
                     .email('Invalid email address')
                     .required('Please enter your Email Address'),
             })}
-            onSubmit={(values, {setSubmitting}) =>{
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400)
+            onSubmit={(values, actions) =>{
+                toast(
+                    `Thank you for the reservation ${values.firstName}! We have you noted down for a table of ${values.partySize}`,
+                    {
+                      duration: 6000,
+                    }
+                  );
+                actions.resetForm();
             }}
         >
             <Form>
-                <img src={require('../../assets/restaurant.jpg')} className="reservation-picture"/>
+                <img src={require('../../assets/restaurant.jpg')} className="reservation-picture" alt="Tables"/>
                 <h1>Table Reservations</h1>
-
                 <Field name="partySize" as="select" className="partySize">
                     <option value="" disabled selected>Select your Party Size</option>
                     <option value ="1">1</option>
@@ -63,9 +66,9 @@ function ReservationForm() {
                 <br/>
                 <Field name="occasion" as="select" className="occasion">
                     <option value="" disabled selected>Occasion</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Anniversary">Anniversary</option>
-                    <option value="Engagement">Engagement</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="engagement">Engagement</option>
                 </Field>
                 <br/>
                 <br/>
